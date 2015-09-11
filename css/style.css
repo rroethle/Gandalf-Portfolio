@@ -1,0 +1,330 @@
+/*
+  The following styles were added or modified from the original file provided:
+  -	ul .singleSkill:	style added
+  -	#collision:			style added
+  -	button:				added padding
+  -	.caption > p:		style added
+  -	.caption:			style added
+  - .mapHeading:		sytle added
+  media query at max-width 900px
+	-collsion,caption, and svg styles updated
+  media query at max-width 750px
+	-.project-entry>img: centers images in project section and places each image in it's own row.
+  @media print:		
+	- added: removes collision and caption div for printing.
+*/
+
+* {
+  padding:0;
+  margin:0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.education-entry, .work-entry, .project-entry {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+h1 {
+  font-size: 40px;
+  color: #F5A623;
+  line-height: 48px;
+  display: inline;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #999999;
+  line-height: 29px;
+  padding: 10px;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 20px;
+  color: #000000;
+  line-height: 22px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #4A4A4A;
+  line-height: 17px;
+}
+
+h2, h3, h4, h5 {
+  padding:10px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#skillsH3 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#header > span {
+	color: white;
+}
+
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+  float: left;
+}
+
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+  float: right;
+
+}
+
+p {
+  font-size: 14px;
+  color: #333333;
+  line-height: 21px;
+}
+
+a {
+  color: #1199C3;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+.welcome-message {
+  font-style: italic;
+  font-size: 18px;
+  color: #F3F3F3;
+  line-height: 28px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#skillsH3 {
+  color: #F5AE23;
+  display: none;
+}
+
+.orange {
+  background-color: #F5AE23;
+}
+
+.orange-text {
+  color: #F5AE23;
+}
+
+.white-text {
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.gray {
+  background-color: #F3F3F3;
+  padding-bottom: 10px;
+  clear:both;
+}
+
+.dark-gray {
+  background-color: #4A4A4A;
+}
+
+#header {
+  background-color: #484848;
+}
+
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.center-content {
+  padding-top: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 0%
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*
+  added the disc to each singleSkill located in the work entry section to help highlight items from
+  each previous job
+*/
+ul .singleSkill {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 10px;
+  font-style: italic;
+}
+
+.biopic {
+  float: left;
+  padding: 10px;
+  width: 200px;
+  display: none;
+}
+
+/*
+  Added #collision to float on the right for the header and will be removed when the smallest
+  breakpoint is hit.
+*/
+#collision {
+  float: right;
+  width: 175px;
+  border: solid;
+  border-color: red;
+  padding: 0;
+  margin: 10px;
+}
+
+img {
+  padding: 10px;
+}
+
+
+/* Bar chart stuff */
+.chart div {
+  font: 10px sans-serif;
+  background-color: #4A4A4A;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  height: 12px;
+  color: white;
+  display: inline-block;
+}
+
+span {
+  padding: 5px;
+}
+
+#letsConnect {
+  text-align: center;
+}
+
+div .flex-box .flex-item{
+  list-style-type: none;
+}
+
+button {
+  padding: 10px;
+}
+
+.caption {
+float: right;   
+text-align: center;
+padding: 0;
+margin: 0;
+}
+
+.caption >p {
+	color: white;
+	padding: 0;
+	margin: 0;
+	font-style: italic;
+}
+
+#map {
+  display: block;
+  height: 95%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+.mapHeading {
+  margin: 0;
+  padding-top: 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  #letsConnect {
+    margin-top: 5%;
+  }
+}
+/*end of media query-max-width 1024px*/
+
+@media only screen and (max-width:900px) {
+  .biopic {
+    width: 175px;
+  }
+  
+  /*makes collision svg smaller at 900px breakpoint*/
+ svg {
+	width: 150px;
+	height: 110px;
+  }
+
+  /*makes collision width smaller at 900px breakpoint*/
+  #collision {
+    width: 150px;
+  }
+}
+/*end of media query-max-width 900px*/
+
+@media only screen and (max-width: 750px) {
+  #letsConnect {
+    margin-top: 10%;
+  }
+  
+  .biopic {
+    width: 150px;
+  }
+  
+  .welcome-message {
+    display: none;
+  }
+  
+  /*centers images when screen size is less than 750px*/ 
+  .project-entry > img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  
+    .caption {
+	  display: none;
+	}
+}
+/*end of media query-max-width 750px*/
+
+@media only screen and (min-width: 750px) {
+  #skillsH3,
+  .biopic {
+    display: block;
+  }
+}
+/*end of media query-min-width 750px*/
+
+/*if user prints resume, the collision div and caption will not print*/
+@media print {
+    .caption {
+		display: none;
+	}
+}
